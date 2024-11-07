@@ -22,7 +22,7 @@ describe("Token Contract", function () {
 
   it("Should allow the deployer to mint tokens", async function () {
     await token.connect(deployer).mintToken(100);
-    expect(await token.balances(deployer)).to.equal(100);
+    expect(await token.balances(deployer.address)).to.equal(100);
   });
 
   it("Should not allow non-deployer to mint tokens", async function () {
