@@ -8,7 +8,7 @@ describe("Token Contract", function () {
   let addr1;
   let addr2;
 
-  // Before each test, deploy a new Token contract
+  //beforeEach is used to deploy a new contract before each test case/
   beforeEach(async function () {
     [deployer, addr1, addr2] = await ethers.getSigners();
     Token = await ethers.getContractFactory("Token");
