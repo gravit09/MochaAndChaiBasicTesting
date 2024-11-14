@@ -5,7 +5,7 @@ describe("Addition Contract", function () {
   let Addition;
   let addition;
 
-  before(async function () {
+  beforeEach(async function () {
     Addition = await ethers.getContractFactory("Addition");
     addition = await Addition.deploy();
   });
